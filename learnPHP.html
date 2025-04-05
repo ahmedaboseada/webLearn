@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/learnPHP.css">
+    <title>PHP Learn</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>PHP Learn</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="learnHTML.html">HTML</a></li>
+          <li><a href="learnCSS.html">CSS</a></li>
+          <li><a href="learnJS.html">JS</a></li>
+          <li><a class="php" href="">PHP</a></li>
+          <li><a href="learnMySQL.html">MySQL</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="page">
+      <button class="toggle-btn" onclick="toggleSidebar()">></button>
+      <aside class="sidebar">
+        <ul>
+          <li><a href="#introPhpDescription">Intro to php</a></li>
+          <li><a href="#phpSyntaxDescription">PHP Syntax</a></li>
+          <li><a href="#phpIfConditionsDescription">PHP If Conditions</a></li>
+          <li><a href="#phpArraysDescription">PHP Arrays</a></li>
+          <li><a href="#phpLoopsDescription">PHP Loops</a></li>
+          <li><a href="#phpOOPDescription">PHP OOP</a></li>
+          <li><a href="#phpFunctionsDescription">PHP with MySQL</a></li>
+
+        </ul>
+      </aside>
+      <div class="content">
+        <div class="main">
+          
+          <div class="content-header">
+            <div class="content-header-text">
+              <h1>Learn PHP, Step by Step!</h1>
+              <p>Discover the basics of PHP development.</p>
+            </div>
+            <button class="toggle-all-btn" onclick="toggleAllContent()">Open/Close content</button>
+        </div>
+
+          <!-- Introduction -->
+          <h3 onclick="toggleContent('introPhpDescription')"> Introduction to PHP</h3>
+          <div  id="introPhpDescription" class="description">
+            <p>
+              <span style="color: #FFAC1C; font-weight: 600; font-size: 1.2em;">What is PHP?</span>
+            </p>
+            <p style="color: #ffffff;">
+              PHP is a server-side scripting language created primarily for web development. Unlike client-side languages like JavaScript, PHP scripts run on the server. The results are sent to the client’s browser as HTML.
+            </p>
+
+            <p>
+              <span style="color: #FFAC1C; font-weight: 600; font-size: 1.2em;">Characteristics of PHP</span>
+            </p>
+            <ul>
+              <li style="color: #ffffff;">PHP code is executed on the server.</li>
+              <li style="color: #ffffff;">It can be integrated with databases like MySQL.</li>
+              <li style="color: #ffffff;">PHP is used in content management systems like WordPress.</li>
+            </ul>
+
+            <p>
+              <span style="color: #FFAC1C; font-weight: 600; font-size: 1.2em;">How PHP Works?</span>
+            </p>
+            <p style="color: #ffffff;">
+              PHP scripts are executed on the server and the results are sent to the client’s browser. This allows for dynamic content generation.
+            </p>
+          </div>
+
+          <!-- Syntax and Variables -->
+          <h3  onclick="toggleContent('phpSyntaxDescription')">Syntax and Variables in PHP</h3>
+          <div id="phpSyntaxDescription"  class="description">
+            <p>
+              <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Basic PHP Syntax</span>
+            </p>
+            <p style="color: #ffffff;">
+              PHP code is executed between PHP tags, like &lt;?php … ?>, allowing PHP integration within HTML.
+            </p>
+
+            <p>
+              <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Basic Example of PHP</span>
+            </p>
+            <pre class="code-block">&lt;?php echo "Hello, world!"; ?></pre>
+
+            <p>
+              <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Output</span>
+            </p>
+            <pre class="code-block">Hello, world!</pre>
+
+            <p>
+              <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Comments in PHP</span>
+            </p>
+            <p style="color: #ffffff;">Comments explain code and are ignored by PHP.</p>
+
+            <p>
+              <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">1. Single Line Comment</span>
+            </p>
+            <pre class="code-block">&lt;?php 
+  // This is a comment
+  echo "Hello World!";
+?></pre>
+            <p>
+              <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Output</span>
+            </p>
+            <pre class="code-block">Hello World!</pre>
+
+            <p>
+              <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">2. Multi-Line Comment</span>
+            </p>
+            <pre class="code-block">&lt;?php
+  /* This is a multi-line comment */
+  $geek = "Hello World!"; 
+  echo $geek; 
+?></pre>
+            <p>
+              <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Output</span>
+            </p>
+            <pre class="code-block">Hello World!</pre>
+
+            <p>
+              <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Variables and Data Types</span>
+            </p>
+            <p style="color: #ffffff;">Variables store data, declared with a $ symbol.</p>
+
+            <p>
+              <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Declaring Variables</span>
+            </p>
+            <pre class="code-block">&lt;?php 
+  $name = "XYZ";  
+  // String
+  $age = 30;       
+  // Integer 
+  $isEmployed = true; 
+  // Boolean 
+?></pre>
+            <p>
+              <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Data Types</span>
+            </p>
+            <ul>
+              <li style="color: #ffffff;"><b>String:</b> Text data.</li>
+              <li style="color: #ffffff;"><b>Integer:</b> Whole numbers.</li>
+              <li style="color: #ffffff;"><b>Float:</b> Decimal numbers.</li>
+              <li style="color: #ffffff;"><b>Boolean:</b> True or false.</li>
+            </ul>
+          </div>
+
+          <!-- IF Conditions -->
+          <h3 onclick="toggleContent('phpIfConditionsDescription')">If Conditions in PHP</h3>
+          <div id="phpIfConditionsDescription" class="description">
+            <p>
+              <span style="color: #FFAC1C; font-size: 1.2em;">What is an If Condition?</span>
+            </p>
+            <p style="color: #ffffff;">
+              An <strong>if condition</strong> in PHP allows you to execute code only if a certain condition is true. It helps in decision-making.
+            </p>
+
+            <p>
+              <span style="color: #FFAC1C; font-size: 1.2em;">Types of If Conditions:</span>
+            </p>
+            <ul style="color: #ffffff;">
+              <li><strong>Simple If</strong>: Executes code if the condition is true.</li>
+              <li><strong>If-Else</strong>: Executes one block of code if the condition is true and another if it is false.</li>
+              <li><strong>If-ElseIf-Else</strong>: Executes different blocks of code for multiple conditions.</li>
+            </ul>
+
+            <p>
+              <span style="color: #FFAC1C; font-size: 1.2em;">PHP Example for Simple If:</span>
+            </p>
+            <pre>&lt;?php
+  $age = 18;
+  if ($age >= 18) {
+      echo "You are an adult.\n";
+  }
+?></pre>
+            <p>
+              <span style="color: #FFAC1C; font-size: 1.2em;">Output:</span>
+            </p>
+            <pre>You are an adult.</pre>
+
+            <p>
+              <span style="color: #FFAC1C; font-size: 1.2em;">PHP Example for If-Else:</span>
+            </p>
+            <pre>&lt;?php
+  $score = 50;
+  if ($score >= 60) {
+      echo "You passed.\n";
+  } else {
+      echo "You failed.\n";
+  }
+?></pre>
+            <p>
+              <span style="color: #FFAC1C; font-size: 1.2em;">Output:</span>
+            </p>
+            <pre>You failed.</pre>
+
+            <p>
+              <span style="color: #FFAC1C; font-size: 1.2em;">PHP Example for If-ElseIf-Else:</span>
+            </p>
+            <pre>&lt;?php
+  $grade = 85;
+  if ($grade >= 90) {
+      echo "Excellent\n";
+  } elseif ($grade >= 70) {
+      echo "Good\n";
+  } else {
+      echo "Need Improvement\n";
+  }
+?></pre>
+            <p>
+              <span style="color: #FFAC1C; font-size: 1.2em;">Output:</span>
+            </p>
+            <pre>Good</pre>
+
+            <p>
+              <span style="color: #FFAC1C; font-size: 1.2em;">What is Nested If Condition?</span>
+            </p>
+            <p style="color: #ffffff;">
+              A <strong>nested if</strong> is an if condition inside another if condition. It helps to check multiple conditions together.
+            </p>
+
+            <p>
+              <span style="color: #FFAC1C; font-size: 1.2em;">PHP Example for Nested If:</span>
+            </p>
+            <pre>&lt;?php
+  $age = 20;
+  $hasPermission = true;
+  
+  if ($age >= 18) {
+      if ($hasPermission) {
+          echo "You are allowed to enter.\n";
+      } else {
+          echo "Permission is required.\n";
+      }
+  } else {
+      echo "You are not an adult.\n";
+  }
+?></pre>
+
+            <p>
+              <span style="color: #FFAC1C; font-size: 1.2em;">Output:</span>
+            </p>
+            <pre>You are allowed to enter.</pre>
+          </div>  
+          
+          <!-- Array -->
+          <h3 onclick="toggleContent('phpArraysDescription')">Arrays in PHP</h3>
+          <div id="phpArraysDescription" class="description">
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">Arrays</span></p>
+              <ul style="color: #ffffff;">
+                  <li><strong>Indexed Arrays</strong>: Array with numeric index.</li>
+                  <li><strong>Associative Arrays</strong>: Array with string index.</li>
+                  <li><strong>Multidimensional Arrays</strong>: Arrays containing other arrays.</li>
+              </ul>
+
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">PHP Example for Indexed Arrays:</span></p>
+              <pre>&lt;?php
+    $fruits = array("Apple", "Banana", "Orange");
+    echo $fruits[0], "\n"; // Apple
+    echo $fruits[1], "\n"; // Banana
+    echo $fruits[2], "\n"; // Orange
+?></pre>
+
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+              <pre>
+Apple
+Banana
+Orange</pre>
+
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">PHP Example for Multidimensional Array:</span></p>
+              <pre>&lt;?php
+    $people = array(
+        array("Name" => "Zack", "Age" => 25),
+        array("Name" => "Anthony", "Age" => 30),
+        array("Name" => "Ram", "Age" => 22)
+    );
+    echo $people[0]["Name"], " is ", $people[0]["Age"], " years old.\n"; 
+    echo $people[1]["Name"], " is ", $people[1]["Age"], " years old.\n";
+?></pre>
+
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+              <pre>
+Zack is 25 years old.
+Anthony is 30 years old.</pre>
+          </div>
+
+          <h3 onclick="toggleContent('phpLoopsDescription')">Loops in PHP</h3>
+          <div id="phpLoopsDescription" class="description">
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">What is a Loop?</span></p>
+              <p style="color: #ffffff;">A <strong>loop</strong> repeats a block of code until a condition is false. Loops help avoid repetition.</p>
+
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">Types of Loops:</span></p>
+              <ul style="color: #ffffff;">
+                  <li><strong>For Loop</strong>: For fixed number of iterations.</li>
+                  <li><strong>Foreach Loop</strong>: For looping through arrays.</li>
+                  <li><strong>While Loop</strong>: Repeat as long as the condition is true.</li>
+                  <li><strong>Do-While Loop</strong>: Always runs at least once before checking the condition.</li>
+              </ul>
+
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">PHP Example with Loops:</span></p>
+              <pre>&lt;?php
+    // For Loop
+    for ($i = 0; $i &lt; 2; $i++) {
+        echo "Hello World!\n";
+    }
+
+    // Foreach Loop
+    $fruits = array("Apple", "Banana", "Orange");
+    foreach ($fruits as $fruit) {
+        echo $fruit . "\n";
+    }
+
+    // While Loop
+    $i = 0;
+    while ($i &lt; 2) {
+        echo "Hello World!\n";
+        $i++;
+    }
+
+    // Do-While Loop
+    $i = 0;
+    do {
+        echo "Hello World!\n";
+        $i++;
+    } while ($i &lt; 2);
+?></pre>
+
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+              <pre>
+Using For Loop:
+Hello World!
+Hello World!
+
+Using Foreach Loop:
+Apple
+Banana
+Orange
+
+Using While Loop:
+Hello World!
+Hello World!
+
+Using Do-While Loop:
+Hello World!
+Hello World!</pre>
+          </div>
+
+          <!-- OOP -->
+          <h3 onclick="toggleContent('phpOOPDescription')">Object-Oriented Programming (OOP) in PHP</h3>
+          <div id="phpOOPDescription" class="description">
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">What is OOP?</span></p>
+            <p style="color: #ffffff;"><strong>Object-Oriented Programming (OOP)</strong> is a programming paradigm that uses "objects" and "classes" to organize code in a more structured way.</p>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Key Concepts of OOP:</span></p>
+            <ul style="color: #ffffff;">
+                <li><strong>Class</strong>: A blueprint for creating objects (a class defines properties and methods).</li>
+                <li><strong>Object</strong>: An instance of a class. It contains data and functions that define the object's behavior.</li>
+                <li><strong>Encapsulation</strong>: Restricting access to some of an object's components and only exposing necessary parts.</li>
+                <li><strong>Inheritance</strong>: A class can inherit properties and methods from another class.</li>
+                <li><strong>Polymorphism</strong>: The ability to treat objects of different classes in a similar way.</li>
+                <li><strong>Abstraction</strong>: Hiding the complexity and showing only essential features of an object.</li>
+            </ul>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">PHP Example for Creating a Class and Object:</span></p>
+            <pre>&lt;?php
+    class Car {
+        public $brand;
+        public $model;
+
+        // Constructor to initialize properties
+        public function __construct($brand, $model) {
+            $this->brand = $brand;
+            $this->model = $model;
+        }
+
+        // Method to display car details
+        public function displayDetails() {
+            echo "Brand: " . $this->brand . "\n";
+            echo "Model: " . $this->model . "\n";
+        }
+    }
+
+    // Create an object of class Car
+    $car1 = new Car("Toyota", "Corolla");
+    $car1->displayDetails();
+?></pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+            <pre>
+Brand: Toyota
+Model: Corolla</pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">PHP Example for Inheritance:</span></p>
+            <pre>&lt;?php
+    class Vehicle {
+        public $brand;
+
+        public function __construct($brand) {
+            $this->brand = $brand;
+        }
+
+        public function displayBrand() {
+            echo "Brand: " . $this->brand . "\n";
+        }
+    }
+
+    class Car extends Vehicle {
+        public $model;
+
+        public function __construct($brand, $model) {
+            parent::__construct($brand);
+            $this->model = $model;
+        }
+
+        public function displayDetails() {
+            echo "Brand: " . $this->brand . "\n";
+            echo "Model: " . $this->model . "\n";
+        }
+    }
+
+    // Create an object of class Car (inherits from Vehicle)
+    $car2 = new Car("BMW", "X5");
+    $car2->displayDetails();
+?></pre>
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+            <pre>
+Brand: BMW
+Model: X5</pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">PHP Example for Polymorphism:</span></p>
+            <pre>&lt;?php
+    class Animal {
+        public function sound() {
+            echo "Animal makes a sound.\n";
+        }
+    }
+
+    class Dog extends Animal {
+        public function sound() {
+            echo "Dog barks.\n";
+        }
+    }
+
+    class Cat extends Animal {
+        public function sound() {
+            echo "Cat meows.\n";
+        }
+    }
+
+    // Polymorphism in action
+    $dog = new Dog();
+    $cat = new Cat();
+
+    $dog->sound();  // Dog barks.
+    $cat->sound();  // Cat meows.
+?></pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+            <pre>Dog barks.
+Cat meows.</pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">PHP Example for Abstraction:</span></p>
+            <pre>&lt;?php
+    abstract class Animal {
+        abstract public function sound();
+    }
+
+    class Dog extends Animal {
+        public function sound() {
+            echo "Dog barks.\n";
+        }
+    }
+
+    // Create object of Dog
+    $dog1 = new Dog();
+    $dog1->sound();
+?></pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+            <pre>Dog barks.</pre>
+          </div>
+
+          <!-- PHP with MySQL -->
+          <h3 onclick="toggleContent('phpFunctionsDescription')">PHP with MySQL</h3>
+          <div id="phpFunctionsDescription" class="description">
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">What is PHP and MySQL?</span></p>
+              <p style="color: #ffffff;">
+                  PHP is a server-side scripting language used to interact with databases like MySQL. MySQL is a relational database management system for storing and retrieving data. PHP connects to MySQL to run queries and process data.
+              </p>
+
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">Basic Steps to Work with PHP and MySQL:</span></p>
+              <ol style="color: #ffffff;">
+                  <li><strong>Connect to MySQL database:</strong> Use mysqli_connect() or PDO to connect.</li>
+                  <li><strong>Perform SQL queries:</strong> Use SQL to select, insert, or update data.</li>
+                  <li><strong>Close the connection:</strong> Close the connection with mysqli_close() or PDO::close().</li>
+              </ol>
+
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">PHP Example with MySQL (Connecting, Inserting Data):</span></p>
+              <pre>&lt;?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "test_db";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "INSERT INTO users (name, email) VALUES ('John Doe', 'john@example.com')";
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+?></pre>
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+              <pre>New record created successfully</pre>
+
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">PHP Example with MySQL (Selecting Data):</span></p>
+              <pre>&lt;?php
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    $sql = "SELECT id, name, email FROM users";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "id: " . $row["id"]. " - Name: " . $row["name"]. " - Email: " . $row["email"]. "<br>";
+        }
+    } else {
+        echo "0 results";
+    }
+
+    $conn->close();
+?></pre>
+
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+              <pre>id: 1 - Name: John Doe - Email: john@example.com</pre>
+
+              <p><span style="color: #FFAC1C; font-size: 1.3em;">Important Notes:</span></p>
+              <ul style="color: #ffffff;">
+                  <li><strong>MySQL Connection:</strong> Always handle connection errors to prevent failures.</li>
+                  <li><strong>SQL Injection Protection:</strong> Use prepared statements to avoid SQL injection attacks.</li>
+              </ul>
+          </div>
+        </div>    
+      <footer>
+        <div class="inner-footer">
+            <p>Made by Mohaned Hesham</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+      window.onload = function () {
+        const descriptions = document.querySelectorAll(".description");
+        descriptions.forEach((description) => {
+          description.style.display = "none";
+        });
+        const toggleBtn = document.querySelector(".toggle-btn");
+        toggleBtn.textContent = "<";
+      };
+
+      function toggleContent(elementId) {
+        const content = document.getElementById(elementId);
+        if (content.style.display === "none") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      }
+
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        const toggleBtn = document.querySelector(".toggle-btn");
+
+        sidebar.classList.toggle("hidden");
+        toggleBtn.classList.toggle("open");
+
+        if (toggleBtn.classList.contains("open")) {
+          toggleBtn.textContent = ">";
+        } else {
+          toggleBtn.textContent = "<";
+        }
+      }
+
+      function toggleAllContent() {
+        const descriptions = document.querySelectorAll(".description");
+        const areAllClosed = Array.from(descriptions).every(
+          (desc) => desc.style.display === "none"
+        );
+
+        descriptions.forEach((description) => {
+          description.style.display = areAllClosed ? "block" : "none";
+        });
+      }
+    </script>
+  </body>
+</html>

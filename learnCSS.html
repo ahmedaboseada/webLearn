@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/learnCSS.css" />
+    <title>CSS Learn</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>CSS Learn</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="learnHTML.html">HTML</a></li>
+          <li><a class="css" href="">CSS</a></li>
+          <li><a href="learnJS.html">JS</a></li>
+          <li><a href="learnPHP.html">PHP</a></li>
+          <li><a href="learnMySQL.html">MySQL</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="page">
+      <button class="toggle-btn" onclick="toggleSidebar()">></button>
+      <aside class="sidebar">
+        <ul>
+          <li><a href="#cssIntro">Introduction to CSS</a></li>
+          <li><a href="#cssSyntax">CSS Syntax</a></li>
+          <li><a href="#selectors">CSS Selectors</a></li>
+          <li><a href="#boxModel">CSS Box Model</a></li>
+          <li><a href="#layout">CSS Layout</a></li>
+          <li><a href="#stylingText">Styling Text with CSS</a></li>
+          <li><a href="#colors">CSS Colors</a></li>
+          <li><a href="#backgrounds">CSS Backgrounds</a></li>
+          <li><a href="#transitions">CSS Transitions</a></li>
+          <li><a href="#animations">CSS Animations</a></li>
+          <li><a href="#responsiveDesign">Responsive Web Design</a></li>
+          <li><a href="#practiceExamples">Practice Examples</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </aside>
+      <div class="content">
+        <div class="main">
+          <div class="content-header">
+            <div class="content-header-text">
+              <h1>Learn CSS, Step by Step!</h1>
+              <p>Master the art of styling web pages using CSS.</p>
+            </div>
+            <button class="toggle-all-btn" onclick="toggleAllContent()">Open/Close content</button>
+          </div>
+
+          <!-- Introduction to CSS -->
+          <h3 onclick="toggleContent('cssIntro')">Introduction to CSS</h3>
+          <div id="cssIntro" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >What is CSS?</span
+              >
+            </p>
+            <p>
+              CSS (Cascading Style Sheets) is used to style and layout web pages.
+              With CSS, you can control the color, font, spacing, and placement
+              of HTML elements.
+            </p>
+          </div>
+
+          <!-- CSS Syntax -->
+          <h3 onclick="toggleContent('cssSyntax')">CSS Syntax</h3>
+          <div id="cssSyntax" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Basic CSS Syntax</span
+              >
+            </p>
+            <p>
+              CSS syntax consists of selectors and declarations. A selector
+              targets an HTML element, and a declaration defines how to style it.
+            </p>
+            <pre class="code-block">
+  h1 {
+    color: blue;
+    font-size: 2em;
+  }</pre>
+          </div>
+
+          <!-- CSS Selectors -->
+          <h3 onclick="toggleContent('selectors')">CSS Selectors</h3>
+          <div id="selectors" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Types of CSS Selectors</span
+              >
+            </p>
+            <ul style="color: #ffffff">
+              <li><code>*</code>: Universal selector (selects all elements).</li>
+              <li><code>element</code>: Targets an element by its name (e.g., <code>p</code>, <code>h1</code>).</li>
+              <li><code>#id</code>: Targets an element with a specific ID.</li>
+              <li><code>.class</code>: Targets elements with a specific class.</li>
+            </ul>
+            <pre class="code-block">
+  p {
+    color: red;
+  }
+  .highlight {
+    background-color: yellow;
+  }</pre>
+          </div>
+
+          <!-- CSS Box Model -->
+          <h3 onclick="toggleContent('boxModel')">CSS Box Model</h3>
+          <div id="boxModel" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Understanding the Box Model</span
+              >
+            </p>
+            <p>
+              The CSS box model consists of margins, borders, padding, and the
+              content area. Understanding this model is essential for controlling
+              element sizing and spacing.
+            </p>
+            <pre class="code-block">
+  .box {
+    width: 300px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 10px;
+  }</pre>
+          </div>
+
+          <!-- CSS Layout -->
+          <h3 onclick="toggleContent('layout')">CSS Layout</h3>
+          <div id="layout" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Positioning and Layout</span
+              >
+            </p>
+            <p>
+              CSS provides several properties to control element positioning
+              and layout, including <code>display</code>, <code>position</code>,
+              and <code>flexbox</code>.
+            </p>
+            <pre class="code-block">
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }</pre>
+          </div>
+
+          <!-- Styling Text with CSS -->
+          <h3 onclick="toggleContent('stylingText')">Styling Text with CSS</h3>
+          <div id="stylingText" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Styling Text</span
+              >
+            </p>
+            <p>CSS allows you to control text properties like font, size, and color.</p>
+            <pre class="code-block">
+  p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: green;
+  }</pre>
+          </div>
+
+          <!-- CSS Colors -->
+          <h3 onclick="toggleContent('colors')">CSS Colors</h3>
+          <div id="colors" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Using Colors in CSS</span
+              >
+            </p>
+            <p>CSS provides several ways to define colors:</p>
+            <ul style="color: #ffffff">
+              <li><code>color: red;</code> - Named colors.</li>
+              <li><code>color: #ff0000;</code> - Hex color codes.</li>
+              <li><code>color: rgb(255, 0, 0);</code> - RGB color values.</li>
+            </ul>
+          </div>
+
+          <!-- CSS Backgrounds -->
+          <h3 onclick="toggleContent('backgrounds')">CSS Backgrounds</h3>
+          <div id="backgrounds" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Setting Backgrounds</span
+              >
+            </p>
+            <p>
+              You can set background images, colors, and more with CSS using the
+              <code>background</code> property.
+            </p>
+            <pre class="code-block">
+  body {
+    background-color: lightblue;
+    background-image: url('image.jpg');
+    background-repeat: no-repeat;
+  }</pre>
+          </div>
+
+          <!-- CSS Transitions -->
+          <h3 onclick="toggleContent('transitions')">CSS Transitions</h3>
+          <div id="transitions" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Creating Transitions</span
+              >
+            </p>
+            <p>
+              Transitions allow you to animate changes in CSS properties over a
+              set time period.
+            </p>
+            <pre class="code-block">
+  button {
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: yellow;
+  }</pre>
+          </div>
+
+          <!-- CSS Animations -->
+          <h3 onclick="toggleContent('animations')">CSS Animations</h3>
+          <div id="animations" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Animating Elements with CSS</span
+              >
+            </p>
+            <p>
+              CSS animations let you create complex animations without JavaScript.
+            </p>
+            <pre class="code-block">
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(100px); }
+  }
+  
+  .animate {
+    animation: slide 2s infinite;
+  }</pre>
+          </div>
+
+          <!-- Responsive Web Design -->
+          <h3 onclick="toggleContent('responsiveDesign')">Responsive Web Design</h3>
+          <div id="responsiveDesign" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Creating Responsive Layouts</span
+              >
+            </p>
+            <p>
+              Use media queries in CSS to create responsive designs that adapt
+              to different screen sizes.
+            </p>
+            <pre class="code-block">
+  @media screen and (max-width: 600px) {
+    body {
+      font-size: 14px;
+    }
+  }</pre>
+          </div>
+
+          <!-- Practice Examples -->
+          <h3 onclick="toggleContent('practiceExamples')">Practice Examples</h3>
+          <div id="practiceExamples" class="description">
+            <p>Here's a simple CSS button example:</p>
+            <pre class="code-block">
+  button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: darkblue;
+  }</pre>
+          </div>
+
+          <!-- Conclusion -->
+          <h3 onclick="toggleContent('conclusion')">Conclusion</h3>
+          <div id="conclusion" class="description">
+            <p>
+              CSS is essential for styling web pages. With a strong grasp of
+              CSS concepts, you can design visually appealing and responsive
+              websites.
+            </p>
+          </div>
+        </div>
+        <footer>
+          <div class="inner-footer">
+            <p>Made by Mohamed Ahmed</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        const descriptions = document.querySelectorAll(".description");
+        descriptions.forEach((description) => {
+          description.style.display = "none";
+        });
+        const toggleBtn = document.querySelector(".toggle-btn");
+        toggleBtn.textContent = "<";
+      };
+
+      function toggleContent(elementId) {
+        const content = document.getElementById(elementId);
+        if (content.style.display === "none") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      }
+
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        const toggleBtn = document.querySelector(".toggle-btn");
+
+        sidebar.classList.toggle("hidden");
+        toggleBtn.classList.toggle("open");
+
+        if (toggleBtn.classList.contains("open")) {
+          toggleBtn.textContent = ">";
+        } else {
+          toggleBtn.textContent = "<";
+        }
+      }
+
+      function toggleAllContent() {
+        const descriptions = document.querySelectorAll(".description");
+        const areAllClosed = Array.from(descriptions).every(
+          (desc) => desc.style.display === "none"
+        );
+
+        descriptions.forEach((description) => {
+          description.style.display = areAllClosed ? "block" : "none";
+        });
+      }
+    </script>
+  </body>
+</html>

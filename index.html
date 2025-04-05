@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
+    <title>Web Learn</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Web Learn</h1>
+      </div>
+      <div id="date"></div>
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="learnHTML.html">HTML</a></li>
+          <li><a href="learnCSS.html">CSS</a></li>
+          <li><a href="learnJS.html">JS</a></li>
+          <li><a href="learnPHP.html">PHP</a></li>
+          <li><a href="learnMySQL.html">MySQL</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+
+    <div class="page">
+      <button class="toggle-btn" onclick="toggleSidebar()">></button>
+      <aside class="sidebar">
+        <ul>
+          <li><a href="#web">What is web?</a></li>
+          <li><a href="#frontend">Frontend Development</a></li>
+          <li><a href="#backend">Backend Development</a></li>
+          <li><a href="#fullStack">Full Stack Development</a></li>
+          <li><a href="#otherTopics">Other topics</a></li>
+        </ul>
+      </aside>
+      <div class="content">
+        <div class="main">
+          <div id="web">
+            <h1>What is web?</h1>
+            <h3>
+              The web, also known as the World Wide Web (WWW), is a vast system of interconnected documents and multimedia, accessible through the internet. It enables people to share information, interact, and use services online. At its core, the web is built on websites, which consist of various pages delivering content such as text, images, and videos to users.
+            </h3>
+          </div>
+          <div id="frontend">
+            <h2>Frontend Development</h2>
+            <h3>
+              Frontend development is the process of creating the visual and interactive elements of a website. It determines what users see and interact with in their browsers.
+            </h3>
+            <ul>
+              <li>
+                <strong>Key Responsibilities:</strong>
+                <ul>
+                  <li>Designing visually appealing user interfaces (UI).</li>
+                  <li>Ensuring responsiveness across devices.</li>
+                  <li>Enhancing user experience (UX) with interactivity.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Essential Languages and Tools:</strong>
+                <ul>
+                  <li>HTML: For structuring web pages.</li>
+                  <li>CSS: For styling elements like colors, layouts, and animations.</li>
+                  <li>JavaScript: For dynamic features like dropdown menus and sliders.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Popular Frontend Frameworks:</strong>
+                <ul>
+                  <li>React.js</li>
+                  <li>Angular</li>
+                  <li>Vue.js</li>
+                  <li>Tailwind CSS</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div id="backend">
+            <h2>Backend Development</h2>
+            <h3>
+              Backend development focuses on the server-side logic and data handling that power web applications.
+            </h3>
+            <ul>
+              <li>
+                <strong>Key Responsibilities:</strong>
+                <ul>
+                  <li>Managing servers, databases, and application logic.</li>
+                  <li>Ensuring data integrity and security.</li>
+                  <li>Developing APIs for seamless frontend-backend communication.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Essential Languages and Tools:</strong>
+                <ul>
+                  <li>JavaScript (Node.js): For scalable server-side operations.</li>
+                  <li>Python: Known for simplicity, with frameworks like Django and Flask.</li>
+                  <li>Ruby: Used with Ruby on Rails for rapid development.</li>
+                  <li>PHP: A staple for web development, powering CMS platforms.</li>
+                  <li>Java: Robust and scalable, often used with Spring Boot.</li>
+                  <li>Go (Golang): Ideal for high-performance applications.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Databases:</strong>
+                <ul>
+                  <li>SQL: MySQL, PostgreSQL.</li>
+                  <li>NoSQL: MongoDB, Firebase.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div id="fullStack">
+            <h2>Full Stack Development</h2>
+            <h3>
+              Full stack development combines frontend and backend skills, allowing developers to build complete web applications.
+            </h3>
+          </div>
+          <div id="otherTopics">
+            <h2>Other Topics in Web Development</h2>
+            <ul>
+              <li>
+                <h3>Version Control</h3>
+                <p>Tools like Git and platforms like GitHub and GitLab help developers track changes, collaborate, and manage code repositories effectively.</p>
+              </li>
+              <li>
+                <h3>Web Performance Optimization</h3>
+                <p>
+                  Techniques like code minification, image optimization, and Content Delivery Networks (CDNs) improve website loading speeds and user experience.
+                </p>
+              </li>
+              <li>
+                <h3>Accessibility</h3>
+                <p>
+                  Ensuring websites are usable by people with disabilities by following guidelines like WCAG (Web Content Accessibility Guidelines).
+                </p>
+              </li>
+              <li>
+                <h3>Search Engine Optimization (SEO)</h3>
+                <p>
+                  Techniques to improve website visibility in search engine results, including keyword research, metadata optimization, and quality content creation.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>        
+        <footer>
+          <div class="inner-footer">
+            <p>Made by Mohamed Al-Azab</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        const toggleBtn = document.querySelector(".toggle-btn");
+        toggleBtn.textContent = "<";
+      };
+
+      function toggleContent(contentId) {
+        const content = document.getElementById(contentId);
+        content.classList.toggle("visible");
+      }
+
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        const toggleBtn = document.querySelector(".toggle-btn");
+
+        sidebar.classList.toggle("hidden");
+        toggleBtn.classList.toggle("open");
+
+        if (toggleBtn.classList.contains("open")) {
+          toggleBtn.textContent = ">";
+        } else {
+          toggleBtn.textContent = "<";
+        }
+      }
+      function displayDate() {
+  const dateElement = document.getElementById("date");
+  const now = new Date();
+  const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+  dateElement.textContent = now.toLocaleDateString(undefined, options);
+}
+
+window.onload = function () {
+  const toggleBtn = document.querySelector(".toggle-btn");
+  toggleBtn.textContent = "<";
+  displayDate();
+};
+    </script>
+  </body>
+</html>

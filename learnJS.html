@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/learnJS.css">
+    <title>JavaScript Learn</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>JavaScript Learn</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="learnHTML.html">HTML</a></li>
+          <li><a href="learnCSS.html">CSS</a></li>
+          <li><a class="js" href="">JS</a></li>
+          <li><a href="learnPHP.html">PHP</a></li>
+          <li><a href="learnMySQL.html">MySQL</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="page">
+      <button class="toggle-btn" onclick="toggleSidebar()">></button>
+      <aside class="sidebar">
+        <ul>
+            <li><a href="#introJavaScript">Introduction to JavaScript</a></li>
+            <li><a href="#jsRoleDescription">The role of javaScript in web ?</a></li>
+            <li><a href="#jsBasicSyntaxDescription">Basic syntax of javaScript </a></li>
+            <li><a href="#jsDomDescription">Dom Manipulation</a></li>
+            <li><a href="#jsEventsDescription">Events</a></li>
+            <li><a href="#jsIfConditionsDescription">If conditions</a></li>
+            <li><a href="#jsArraysDescription">Arrays</a></li>
+            <li><a href="#jsLoopsDescription">Loops</a></li>
+            <li><a href="#jsOOPDescription"> Objects</a></li>
+            <li><a href="#jsAsyncDescription">Asynchoronous</a></li>
+            <li><a href="#jsLibrariesDescription">Libraries and Frameworks</a></li>
+            <li><a href="#jsConclusionDescription">Conclution</a></li>
+          </ul>
+      </aside>
+      <div class="content">
+        <div class="main">
+            <div class="content-header">
+                <div class="content-header-text">
+                    <h1>Learn JavaScript, Step by Step!</h1>
+                    <p>Discover the basics of JavaScript development.</p>
+                </div>
+                <button class="toggle-all-btn" onclick="toggleAllContent()">Open/Close content</button>
+            </div>
+
+            <h3 onclick="toggleContent('introJsDescription')">Introduction to JavaScript</h3>
+            <div id="introJsDescription" class="description">
+            <p>
+                <span style="color: #FFAC1C; font-weight: 600; font-size: 1.2em;">What is JavaScript</span>
+            </p>
+            <p style="color: #ffffff;">
+                JavaScript (JS) is a lightweight, interpreted programming language
+                used for creating dynamic web pages. It allows developers to
+                implement complex features such as interactive forms, animations,
+                and real-time updates. JavaScript is supported by all modern web
+                browsers, making it a cornerstone of web development.
+            </p>
+
+            <p>
+                <span style="color: #FFAC1C; font-weight: 600; font-size: 1.2em;">Characteristics of JavaScript</span>
+            </p>
+            <ul>
+                <li style="color: #ffffff;">JavaScript code is executed on the client side.</li>
+                <li style="color: #ffffff;">It can interact with HTML and CSS to create dynamic content.</li>
+                <li style="color: #ffffff;">JavaScript is essential for responsive web design and enhancing user experience.</li>
+            </ul>
+
+            <p>
+                <span style="color: #FFAC1C; font-weight: 600; font-size: 1.2em;">How JavaScript Works?</span>
+            </p>
+            <p style="color: #ffffff;">
+                JavaScript code runs in the user's web browser, allowing for real-time interaction without needing to refresh the page. This makes web applications more responsive and dynamic.
+            </p>
+            </div>
+
+            <h3 onclick="toggleContent('jsRoleDescription')">The Role of JavaScript in Web Development</h3>
+            <div id="jsRoleDescription" class="description">
+            <p>
+                <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">JavaScript's Role in Web Development</span>
+            </p>
+            <p style="color: #ffffff;">
+                JavaScript works alongside HTML and CSS to build modern websites:
+            </p>
+            <ul style="color: #ffffff;">
+                <li><b>HTML:</b> Structures the content of the webpage.</li>
+                <li><b>CSS:</b> Styles the webpage's appearance.</li>
+                <li><b>JavaScript:</b> Adds interactivity and dynamic behavior.</li>
+            </ul>
+            <p style="color: #ffffff;">
+                For example, JavaScript enables features like dropdown menus, sliders, and pop-up alerts.
+            </p>
+            </div>
+
+
+            <h3 onclick="toggleContent('jsBasicSyntaxDescription')">Basic Syntax of JavaScript</h3>
+            <div id="jsBasicSyntaxDescription" class="description">
+                <p>
+                <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Basic Syntax of JavaScript</span>
+                </p>
+                <p style="color: #ffffff;">
+                JavaScript has a straightforward syntax:
+                </p>
+
+                <p>
+                <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Variables</span>
+                </p>
+                <p style="color: #ffffff;">
+                Variables are used to store data.
+                </p>
+                <pre class="code-block">
+                let name = "John";  // Modern syntax
+                var age = 30;       // Older syntax
+                const PI = 3.14;    // Constant value
+                </pre>
+
+                <p>
+                <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Data Types</span>
+                </p>
+                <p style="color: #ffffff;">
+                JavaScript supports numbers, strings, objects, arrays, and more.
+                </p>
+                <pre class="code-block">
+                let number = 10;      // Number
+                let text = "Hello!";  // String
+                let isOnline = true;  // Boolean
+                </pre>
+
+                <p>
+                <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Functions</span>
+                </p>
+                <p style="color: #ffffff;">
+                Functions are blocks of code designed to perform a specific task.
+                </p>
+                <pre class="code-block">
+                function greet() {
+                    console.log("Hello, world!");
+                }
+                greet();  // Outputs: Hello, world!
+                </pre>
+
+                <p>
+                <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Conditional Statements</span>
+                </p>
+                <p style="color: #ffffff;">
+                Conditional statements control the flow of execution based on conditions.
+                </p>
+                <pre class="code-block">
+                let age = 18;
+                if (age >= 18) {
+                    console.log("You are an adult.");
+                } else {
+                    console.log("You are a minor.");
+                }
+                </pre>
+                <p style="color: #ffffff;">
+                Output: You are an adult.
+                </p>
+
+                <p>
+                <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Loops</span>
+                </p>
+                <p style="color: #ffffff;">
+                Loops are used to repeat a block of code multiple times.
+                </p>
+                <pre class="code-block">
+                for (let i = 0; i < 5; i++) {
+                    console.log(i);
+                }
+                </pre>
+                <p style="color: #ffffff;">
+                Output: 0, 1, 2, 3, 4
+                </p>
+            </div>
+
+            <h3 onclick="toggleContent('jsDomDescription')">DOM Manipulation</h3>
+            <div id="jsDomDescription" class="description">
+            <p>
+                <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">DOM Manipulation</span>
+            </p>
+            <p style="color: #ffffff;">
+                The Document Object Model (DOM) is the interface through which JavaScript interacts with the HTML structure of a webpage.
+            </p>
+
+            <p>
+                <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Example</span>
+            </p>
+            <pre class="code-block">
+            document.getElementById("myElement").innerHTML = "Welcome!";
+            </pre>
+            <p style="color: #ffffff;">
+                This code finds an HTML element with the ID <b>myElement</b> and changes its content to "Welcome!".
+            </p>
+            </div>
+
+            <h3 onclick="toggleContent('jsEventsDescription')">Events in JavaScript</h3>
+            <div id="jsEventsDescription" class="description">
+            <p>
+                <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Events in JavaScript</span>
+            </p>
+            <p style="color: #ffffff;">
+                Events are user actions like clicks, keypresses, or form submissions. JavaScript allows developers to respond to these events.
+            </p>
+
+            <p>
+                <span style="color: #FFAC1C; font-weight: bold; font-size: 1.2em;">Example</span>
+            </p>
+            <pre class="code-block">
+            document.getElementById("button").addEventListener("click", function() {
+                alert("Button clicked!");
+            });
+            </pre>
+            </div>
+
+            <!-- IF Conditions -->
+            <h3 onclick="toggleContent('jsIfConditionsDescription')">If Conditions in JavaScript</h3>
+            <div id="jsIfConditionsDescription" class="description">
+            <p>
+            <span style="color: #FFAC1C; font-size: 1.2em;">What is an If Condition?</span>
+            </p>
+            <p style="color: #ffffff;">
+            An <strong>if condition</strong> in JavaScript allows you to execute code only if a certain condition is true. It helps in decision-making.
+            </p>
+
+            <p>
+            <span style="color: #FFAC1C; font-size: 1.2em;">Types of If Conditions:</span>
+            </p>
+            <ul style="color: #ffffff;">
+            <li><strong>Simple If</strong>: Executes code if the condition is true.</li>
+            <li><strong>If-Else</strong>: Executes one block of code if the condition is true and another if it is false.</li>
+            <li><strong>If-ElseIf-Else</strong>: Executes different blocks of code for multiple conditions.</li>
+            </ul>
+
+            <p>
+            <span style="color: #FFAC1C; font-size: 1.2em;">JavaScript Example for Simple If:</span>
+            </p>
+            <pre>&lt;script>
+            let age = 18;
+            if (age >= 18) {
+            document.write("You are an adult.\n");
+            }
+            &lt;/script></pre>
+            <p>
+            <span style="color: #FFAC1C; font-size: 1.2em;">Output:</span>
+            </p>
+            <pre>You are an adult.</pre>
+
+            <p>
+            <span style="color: #FFAC1C; font-size: 1.2em;">JavaScript Example for If-Else:</span>
+            </p>
+            <pre>&lt;script>
+            let score = 50;
+            if (score >= 60) {
+            document.write("You passed.\n");
+            } else {
+            document.write("You failed.\n");
+            }
+            &lt;/script></pre>
+            <p>
+            <span style="color: #FFAC1C; font-size: 1.2em;">Output:</span>
+            </p>
+            <pre>You failed.</pre>
+
+            <p>
+            <span style="color: #FFAC1C; font-size: 1.2em;">JavaScript Example for If-ElseIf-Else:</span>
+            </p>
+            <pre>&lt;script>
+            let grade = 85;
+            if (grade >= 90) {
+            document.write("Excellent\n");
+            } elseif (grade >= 70) {
+            document.write("Good\n");
+            } else {
+            document.write("Need Improvement\n");
+            }
+            &lt;/script></pre>
+            <p>
+            <span style="color: #FFAC1C; font-size: 1.2em;">Output:</span>
+            </p>
+            <pre>Good</pre>
+
+            <p>
+            <span style="color: #FFAC1C; font-size: 1.2em;">What is Nested If Condition?</span>
+            </p>
+            <p style="color: #ffffff;">
+            A <strong>nested if</strong> is an if condition inside another if condition. It helps to check multiple conditions together.
+            </p>
+
+            <p>
+            <span style="color: #FFAC1C; font-size: 1.2em;">JavaScript Example for Nested If:</span>
+            </p>
+            <pre>&lt;script>
+            let age = 20;
+            let hasPermission = true;
+
+            if (age >= 18) {
+            if (hasPermission) {
+                document.write("You are allowed to enter.\n");
+            } else {
+                document.write("Permission is required.\n");
+            }
+            } else {
+            document.write("You are not an adult.\n");
+            }
+            &lt;/script></pre>
+
+            <p>
+            <span style="color: #FFAC1C; font-size: 1.2em;">Output:</span>
+            </p>
+            <pre>You are allowed to enter.</pre>
+            </div>  
+
+            <!-- Array -->
+            <h3 onclick="toggleContent('jsArraysDescription')">Arrays in JavaScript</h3>
+            <div id="jsArraysDescription" class="description">
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Arrays</span></p>
+            <ul style="color: #ffffff;">
+            <li><strong>Indexed Arrays</strong>: Array with numeric index.</li>
+            <li><strong>Associative Arrays</strong>: Array with string index.</li>
+            <li><strong>Multidimensional Arrays</strong>: Arrays containing other arrays.</li>
+            </ul>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">JavaScript Example for Indexed Arrays:</span></p>
+            <pre>&lt;script>
+            let fruits = ["Apple", "Banana", "Orange"];
+            document.write(fruits[0], "\n"); // Apple
+            document.write(fruits[1], "\n"); // Banana
+            document.write(fruits[2], "\n"); // Orange
+            &lt;/script></pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+            <pre>
+            Apple
+            Banana
+            Orange</pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">JavaScript Example for Multidimensional Array:</span></p>
+            <pre>&lt;script>
+            let people = [
+            {Name: "Zack", Age: 25},
+            {Name: "Anthony", Age: 30},
+            {Name: "Ram", Age: 22}
+            ];
+            document.write(people[0].Name + " is " + people[0].Age + " years old.\n"); 
+            document.write(people[1].Name + " is " + people[1].Age + " years old.\n");
+            &lt;/script></pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+            <pre>
+            Zack is 25 years old.
+            Anthony is 30 years old.</pre>
+            </div>
+
+            <!-- Loops -->
+            <h3 onclick="toggleContent('jsLoopsDescription')">Loops in JavaScript</h3>
+            <div id="jsLoopsDescription" class="description">
+                <p><span style="color: #FFAC1C; font-size: 1.3em;">What is a Loop?</span></p>
+                <p style="color: #ffffff;">A <strong>loop</strong> repeats a block of code until a condition is false. Loops help avoid repetition.</p>
+
+                <p><span style="color: #FFAC1C; font-size: 1.3em;">Types of Loops:</span></p>
+                <ul style="color: #ffffff;">
+                <li><strong>For Loop</strong>: For fixed number of iterations.</li>
+                <li><strong>ForEach Loop</strong>: For looping through arrays.</li>
+                <li><strong>While Loop</strong>: Repeat as long as the condition is true.</li>
+                <li><strong>Do-While Loop</strong>: Always runs at least once before checking the condition.</li>
+                </ul>
+
+                <p><span style="color: #FFAC1C; font-size: 1.3em;">JavaScript Example with Loops:</span></p>
+                <pre class="code-block">
+                &lt;script>
+                // For Loop
+                for (let i = 0; i < 2; i++) {
+                    document.write("Hello World!\n");
+                }
+
+                // ForEach Loop
+                let fruits = ["Apple", "Banana", "Orange"];
+                fruits.forEach(fruit => document.write(fruit + "\n"));
+
+                // While Loop
+                let i = 0;
+                while (i < 2) {
+                    document.write("Hello World!\n");
+                    i++;
+                }
+
+                // Do-While Loop
+                i = 0;
+                do {
+                    document.write("Hello World!\n");
+                    i++;
+                } while (i < 2);
+                &lt;/script>
+                </pre>
+
+                <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+                <pre class="code-block">
+                Using For Loop:
+                Hello World!
+                Hello World!
+
+                Using ForEach Loop:
+                Apple
+                Banana
+                Orange
+
+                Using While Loop:
+                Hello World!
+                Hello World!
+
+                Using Do-While Loop:
+                Hello World!
+                Hello World!
+                </pre>
+            </div>
+
+            <!-- OOP -->
+            <h3 onclick="toggleContent('jsOOPDescription')">Object-Oriented Programming (OOP) in JavaScript</h3>
+            <div id="jsOOPDescription" class="description">
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">What is OOP?</span></p>
+            <p style="color: #ffffff;"><strong>Object-Oriented Programming (OOP)</strong> is a programming paradigm that uses "objects" and "classes" to organize code in a more structured way.</p>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Key Concepts of OOP:</span></p>
+            <ul style="color: #ffffff;">
+                <li><strong>Class</strong>: A blueprint for creating objects (a class defines properties and methods).</li>
+                <li><strong>Object</strong>: An instance of a class. It contains data and functions that define the object's behavior.</li>
+                <li><strong>Encapsulation</strong>: Restricting access to some of an object's components and only exposing necessary parts.</li>
+                <li><strong>Inheritance</strong>: A class can inherit properties and methods from another class.</li>
+                <li><strong>Polymorphism</strong>: The ability to treat objects of different classes in a similar way.</li>
+                <li><strong>Abstraction</strong>: Hiding the complexity and showing only essential features of an object.</li>
+            </ul>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">JavaScript Example for Creating a Class and Object:</span></p>
+            <pre>&lt;script>
+            class Car {
+                constructor(brand, model) {
+                    this.brand = brand;
+                    this.model = model;
+                }
+
+                displayDetails() {
+                    document.write("Brand: " + this.brand + "<br>");
+                    document.write("Model: " + this.model + "<br>");
+                }
+            }
+
+            let car1 = new Car("Toyota", "Corolla");
+            car1.displayDetails();
+            &lt;/script></pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+            <pre>
+            Brand: Toyota
+            Model: Corolla</pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">JavaScript Example for Inheritance:</span></p>
+            <pre>&lt;script>
+            class Vehicle {
+                constructor(brand) {
+                    this.brand = brand;
+                }
+
+                displayBrand() {
+                    document.write("Brand: " + this.brand + "<br>");
+                }
+            }
+
+            class Car extends Vehicle {
+                constructor(brand, model) {
+                    super(brand);
+                    this.model = model;
+                }
+
+                displayDetails() {
+                    document.write("Brand: " + this.brand + "<br>");
+                    document.write("Model: " + this.model + "<br>");
+                }
+            }
+
+            let car2 = new Car("BMW", "X5");
+            car2.displayDetails();
+            &lt;/script></pre>
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+            <pre>
+            Brand: BMW
+            Model: X5</pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">JavaScript Example for Polymorphism:</span></p>
+            <pre>&lt;script>
+            class Animal {
+                sound() {
+                    document.write("Animal makes a sound.<br>");
+                }
+            }
+
+            class Dog extends Animal {
+                sound() {
+                    document.write("Dog barks.<br>");
+                }
+            }
+
+            class Cat extends Animal {
+                sound() {
+                    document.write("Cat meows.<br>");
+                }
+            }
+
+            let dog = new Dog();
+            let cat = new Cat();
+
+            dog.sound();  // Dog barks.
+            cat.sound();  // Cat meows.
+            &lt;/script></pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+            <pre>Dog barks.
+            Cat meows.</pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">JavaScript Example for Abstraction:</span></p>
+            <pre>&lt;script>
+            class Animal {
+                sound() {
+                    throw new Error("You have to implement the method!");
+                }
+            }
+
+            class Dog extends Animal {
+                sound() {
+                    document.write("Dog barks.<br>");
+                }
+            }
+
+            let dog1 = new Dog();
+            dog1.sound();
+            &lt;/script></pre>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Output:</span></p>
+            <pre>Dog barks.</pre>
+            </div>
+
+            <h3 onclick="toggleContent('jsAsyncDescription')">Asynchronous JavaScript</h3>
+            <div id="jsAsyncDescription" class="description">
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Asynchronous JavaScript</span></p>
+            <p style="color: #ffffff;">JavaScript handles asynchronous tasks using promises and async/await syntax.</p>
+
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Promise Example:</span></p>
+            <pre class="code-block">
+            let promise = new Promise((resolve, reject) => {
+                let success = true;
+                if (success) {
+                    resolve("Operation successful");
+                } else {
+                    reject("Operation failed");
+                }
+            });
+            promise.then((message) => console.log(message));
+            </pre>
+            </div>
+
+            <h3 onclick="toggleContent('jsLibrariesDescription')">Libraries and Frameworks</h3>
+            <div id="jsLibrariesDescription" class="description">
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Libraries and Frameworks</span></p>
+            <p style="color: #ffffff;">JavaScript has a rich ecosystem of libraries and frameworks that simplify development:</p>
+            <ul style="color: #ffffff;">
+                <li><strong>jQuery</strong>: Simplifies DOM manipulation.</li>
+                <li><strong>React</strong>: A library for building user interfaces.</li>
+                <li><strong>Node.js</strong>: Allows running JavaScript on servers.</li>
+            </ul>
+            </div>
+
+            <h3 onclick="toggleContent('jsConclusionDescription')">Conclusion</h3>
+            <div id="jsConclusionDescription" class="description">
+            <p><span style="color: #FFAC1C; font-size: 1.3em;">Conclusion</span></p>
+            <p style="color: #ffffff;">JavaScript is an essential language for modern web development, enabling developers to create interactive and user-friendly applications. By understanding its core concepts, you can start building dynamic websites and applications with ease.</p>
+            </div>
+
+
+        </div>    
+      <footer>
+        <div class="inner-footer">
+            <p>Made by Mustafa Elgaml</p>
+        </div>
+      </footer>
+    </div>
+    <script>
+        window.onload = function () {
+          const descriptions = document.querySelectorAll(".description");
+          descriptions.forEach((description) => {
+            description.style.display = "none";
+          });
+          const toggleBtn = document.querySelector(".toggle-btn");
+          toggleBtn.textContent = "<";
+        };
+  
+        function toggleContent(elementId) {
+          const content = document.getElementById(elementId);
+          if (content.style.display === "none") {
+            content.style.display = "block";
+          } else {
+            content.style.display = "none";
+          }
+        }
+  
+        function toggleSidebar() {
+          const sidebar = document.querySelector(".sidebar");
+          const toggleBtn = document.querySelector(".toggle-btn");
+  
+          sidebar.classList.toggle("hidden");
+          toggleBtn.classList.toggle("open");
+  
+          if (toggleBtn.classList.contains("open")) {
+            toggleBtn.textContent = ">";
+          } else {
+            toggleBtn.textContent = "<";
+          }
+        }
+  
+        function toggleAllContent() {
+          const descriptions = document.querySelectorAll(".description");
+          const areAllClosed = Array.from(descriptions).every(
+            (desc) => desc.style.display === "none"
+          );
+  
+          descriptions.forEach((description) => {
+            description.style.display = areAllClosed ? "block" : "none";
+          });
+        }
+      </script>
+  </body>
+</html>

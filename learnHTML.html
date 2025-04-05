@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/learnHTML.css" />
+    <title>HTML Learn</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>HTML Learn</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="html" href="">HTML</a></li>
+          <li><a href="learnCSS.html">CSS</a></li>
+          <li><a href="learnJS.html">JS</a></li>
+          <li><a href="learnPHP.html">PHP</a></li>
+          <li><a href="learnMySQL.html">MySQL</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="page">
+      <button class="toggle-btn" onclick="toggleSidebar()">></button>
+      <aside class="sidebar">
+        <ul>
+          <li><a href="#htmlIntro">Introduction to HTML</a></li>
+          <li><a href="#htmlStructure">Structure of an HTML Document</a></li>
+          <li><a href="#basicTags">Basic HTML Tags</a></li>
+          <li><a href="#attributes">HTML Attributes</a></li>
+          <li><a href="#semanticHtml">Semantic HTML</a></li>
+          <li><a href="#html5Features">HTML5 Features</a></li>
+          <li><a href="#cssIntegration">Styling with CSS</a></li>
+          <li>
+            <a href="#jsIntegration">Adding Interactivity with JavaScript</a>
+          </li>
+          <li><a href="#forms">Creating Forms in HTML</a></li>
+          <li><a href="#media">HTML Media Elements</a></li>
+          <li><a href="#tables">Creating Tables in HTML</a></li>
+          <li><a href="#accessibility">HTML Accessibility</a></li>
+          <li><a href="#practiceExamples">Practice Examples</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </aside>
+      <div class="content">
+        <div class="main">
+          <div class="content-header">
+            <div class="content-header-text">
+              <h1>Learn HTML, Step by Step!</h1>
+              <p>Master the basics of web structure and presentation with HTML.</p>
+            </div>
+            <button class="toggle-all-btn" onclick="toggleAllContent()">Open/Close content</button>
+          </div>
+
+
+          <!-- Introduction to HTML -->
+          <h3 onclick="toggleContent('htmlIntro')">Introduction to HTML</h3>
+          <div id="htmlIntro" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >What is HTML?</span
+              >
+            </p>
+            <p>
+              HTML (Hypertext Markup Language) is the standard language for
+              creating web pages. It defines the structure of web pages using
+              markup, making it the backbone of any website. HTML provides the
+              basic structure and organizes content like text, images, and
+              links.
+            </p>
+          </div>
+
+          <!-- Structure of an HTML Document -->
+          <h3 onclick="toggleContent('htmlStructure')">
+            Structure of an HTML Document
+          </h3>
+          <div id="htmlStructure" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Document Organization</span
+              >
+            </p>
+            <p>
+              An HTML document starts with the declaration
+              <code>&lt;!DOCTYPE html&gt;</code>, followed by the
+              <code>&lt;html&gt;</code> tag. Inside it, we have the
+              <code>&lt;head&gt;</code> section (for metadata) and the
+              <code>&lt;body&gt;</code> section (for content visible to users).
+            </p>
+            <pre class="code-block">
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;title&gt;Sample Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Welcome to my webpage&lt;/h1&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;</pre
+            >
+          </div>
+
+          <!-- Basic HTML Tags -->
+          <h3 onclick="toggleContent('basicTags')">Basic HTML Tags</h3>
+          <div id="basicTags" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Common Tags Used in HTML</span
+              >
+            </p>
+            <ul style="color: #ffffff">
+              <li>
+                <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>: Headings of
+                varying levels (from largest to smallest).
+              </li>
+              <li><code>&lt;p&gt;</code>: Paragraphs of text.</li>
+              <li>
+                <code>&lt;a&gt;</code>: Hyperlinks that allow users to navigate
+                between pages.
+              </li>
+              <li>
+                <code>&lt;img&gt;</code>: Images, often used with
+                <code>src</code> and <code>alt</code> attributes.
+              </li>
+              <li>
+                <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code>: Unordered
+                and ordered lists, respectively.
+              </li>
+            </ul>
+            <pre class="code-block">
+  &lt;h1&gt;Main Heading&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph of text. HTML is very easy to learn!&lt;/p&gt;
+  &lt;a href="https://www.example.com"&gt;Click here&lt;/a&gt; to visit our website.</pre
+            >
+          </div>
+
+          <!-- HTML Attributes -->
+          <h3 onclick="toggleContent('attributes')">HTML Attributes</h3>
+          <div id="attributes" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Enhancing HTML Elements</span
+              >
+            </p>
+            <p>
+              Attributes modify the behavior or appearance of HTML elements.
+              Common attributes include:
+            </p>
+            <ul style="color: #ffffff">
+              <li>
+                <code>href</code>: Specifies the URL for
+                <code>&lt;a&gt;</code> (link) elements.
+              </li>
+              <li>
+                <code>src</code>: Specifies the source for
+                <code>&lt;img&gt;</code> (image) elements.
+              </li>
+              <li><code>alt</code>: Provides alternative text for images.</li>
+            </ul>
+            <pre class="code-block">
+  &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+  &lt;img src="image.jpg" alt="An example image"&gt;</pre
+            >
+          </div>
+
+          <!-- Semantic HTML -->
+          <h3 onclick="toggleContent('semanticHtml')">Semantic HTML</h3>
+          <div id="semanticHtml" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Meaningful Markup</span
+              >
+            </p>
+            <p>
+              Semantic HTML refers to the use of HTML tags that convey meaning
+              about the content they enclose. Tags like
+              <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, and
+              <code>&lt;section&gt;</code> provide a better structure for web
+              pages and improve SEO.
+            </p>
+            <pre class="code-block">
+  &lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+  &lt;/header&gt;
+  &lt;footer&gt;
+    &lt;p&gt;Copyright © 2024&lt;/p&gt;
+  &lt;/footer&gt;</pre
+            >
+          </div>
+
+          <!-- HTML5 Features -->
+          <h3 onclick="toggleContent('html5Features')">HTML5 Features</h3>
+          <div id="html5Features" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >New Elements and APIs</span
+              >
+            </p>
+            <p>HTML5 introduced many new features such as:</p>
+            <ul style="color: #ffffff">
+              <li>
+                <code>&lt;video&gt;</code>: Embeds video content without needing
+                external plugins.
+              </li>
+              <li><code>&lt;audio&gt;</code>: Embeds audio content.</li>
+              <li>
+                <code>&lt;canvas&gt;</code>: A space to draw graphics using
+                JavaScript.
+              </li>
+              <li>
+                APIs for things like local storage, geolocation, and more.
+              </li>
+            </ul>
+            <pre class="code-block">
+  &lt;video controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support the video tag.
+  &lt;/video&gt;</pre
+            >
+          </div>
+
+          <!-- Styling with CSS -->
+          <h3 onclick="toggleContent('cssIntegration')">Styling with CSS</h3>
+          <div id="cssIntegration" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Enhancing the Look of Your Site</span
+              >
+            </p>
+            <p>CSS is used to style HTML elements. For example:</p>
+            <pre class="code-block">
+  &lt;style&gt;
+    body {
+      background-color: lightblue;
+    }
+    h1 {
+      color: darkblue;
+      text-align: center;
+    }
+  &lt;/style&gt;</pre
+            >
+            <p>
+              This example changes the background color of the page and the text
+              color of the heading.
+            </p>
+          </div>
+
+          <!-- Adding Interactivity with JavaScript -->
+          <h3 onclick="toggleContent('jsIntegration')">
+            Adding Interactivity with JavaScript
+          </h3>
+          <div id="jsIntegration" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Making Your Website Interactive</span
+              >
+            </p>
+            <p>
+              JavaScript allows you to create dynamic, interactive elements on
+              your webpage. Example:
+            </p>
+            <pre class="code-block">
+  &lt;button onclick="changeText()"&gt;Click Me&lt;/button&gt;
+  &lt;p id="demo"&gt;Hello, World!&lt;/p&gt;
+  
+  &lt;script&gt;
+    function changeText() {
+      document.getElementById("demo").innerHTML = "You clicked the button!";
+    }
+  &lt;/script&gt;</pre
+            >
+          </div>
+
+          <!-- Creating Forms in HTML -->
+          <h3 onclick="toggleContent('forms')">Creating Forms in HTML</h3>
+          <div id="forms" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >User Input with Forms</span
+              >
+            </p>
+            <p>Forms allow users to input data. Example:</p>
+            <pre class="code-block">
+  &lt;form action="submit_form.php" method="post"&gt;
+    &lt;label for="name"&gt;Name&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+    &lt;input type="submit" value="Submit"&gt;
+  &lt;/form&gt;</pre
+            >
+          </div>
+
+          <!-- HTML Media Elements -->
+          <h3 onclick="toggleContent('media')">HTML Media Elements</h3>
+          <div id="media" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Embedding Multimedia</span
+              >
+            </p>
+            <p>
+              HTML supports embedding various types of media like audio and
+              video.
+            </p>
+            <pre class="code-block">
+  &lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mp3"&gt;
+    Your browser does not support the audio tag.
+  &lt;/audio&gt;</pre
+            >
+          </div>
+
+          <!-- Creating Tables in HTML -->
+          <h3 onclick="toggleContent('tables')">Creating Tables in HTML</h3>
+          <div id="tables" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Displaying Data with Tables</span
+              >
+            </p>
+            <p>HTML tables are used to display tabular data. Example:</p>
+            <pre class="code-block">
+  &lt;table&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;John&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/table&gt;</pre
+            >
+          </div>
+
+          <!-- HTML Accessibility -->
+          <h3 onclick="toggleContent('accessibility')">HTML Accessibility</h3>
+          <div id="accessibility" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Improving Website Accessibility</span
+              >
+            </p>
+            <p>
+              Accessible web design ensures your content can be used by people
+              with disabilities. Use features like <code>alt</code> attributes
+              for images, semantic tags, and proper form labeling.
+            </p>
+          </div>
+
+          <!-- Practice Examples -->
+          <h3 onclick="toggleContent('practiceExamples')">Practice Examples</h3>
+          <div id="practiceExamples" class="description">
+            <p>Here's a basic form example:</p>
+            <pre class="code-block">
+  &lt;form&gt;
+    &lt;input type="text" placeholder="Enter Name"&gt;&lt;br&gt;
+    &lt;input type="submit"&gt;
+  &lt;/form&gt;</pre
+            >
+          </div>
+
+          <!-- Conclusion -->
+          <h3 onclick="toggleContent('conclusion')">Conclusion</h3>
+          <div id="conclusion" class="description">
+            <p>
+              HTML is the foundation of web development. With a solid
+              understanding of HTML, you can build and structure websites.
+              Practice with real examples, and you'll be proficient in no time!
+            </p>
+          </div>
+        </div>
+        <footer>
+          <div class="inner-footer">
+            <p>Made by Ezz Eldien</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        const descriptions = document.querySelectorAll(".description");
+        descriptions.forEach((description) => {
+          description.style.display = "none";
+        });
+        const toggleBtn = document.querySelector(".toggle-btn");
+        toggleBtn.textContent = "<";
+      };
+
+      function toggleContent(elementId) {
+        const content = document.getElementById(elementId);
+        if (content.style.display === "none") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      }
+
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        const toggleBtn = document.querySelector(".toggle-btn");
+
+        sidebar.classList.toggle("hidden");
+        toggleBtn.classList.toggle("open");
+
+        if (toggleBtn.classList.contains("open")) {
+          toggleBtn.textContent = ">";
+        } else {
+          toggleBtn.textContent = "<";
+        }
+      }
+
+      function toggleAllContent() {
+        const descriptions = document.querySelectorAll(".description");
+        const areAllClosed = Array.from(descriptions).every(
+          (desc) => desc.style.display === "none"
+        );
+
+        descriptions.forEach((description) => {
+          description.style.display = areAllClosed ? "block" : "none";
+        });
+      }
+    </script>
+  </body>
+</html>

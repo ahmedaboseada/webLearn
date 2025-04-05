@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/learnMySQL.css" />
+    <title>MySQL Learn</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>MySQL Learn</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="learnHTML.html">HTML</a></li>
+          <li><a href="learnCSS.html">CSS</a></li>
+          <li><a href="learnJS.html">JS</a></li>
+          <li><a href="learnPHP.html">PHP</a></li>
+          <li><a class="mysql" href="">MySQL</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="page">
+      <button class="toggle-btn" onclick="toggleSidebar()">></button>
+      <aside class="sidebar">
+        <ul>
+          <li><a href="#mySqlIntroDescription">Introduction to MySQL</a></li>
+          <li><a href="#databaseConcepts">Database Concepts</a></li>
+          <li><a href="#basicCommands">Basic MySQL Commands</a></li>
+          <li><a href="#dataTypes">MySQL Data Types</a></li>
+          <li><a href="#queries">Writing Queries</a></li>
+          <li><a href="#joins">Joins in MySQL</a></li>
+          <li><a href="#mySqlRDBMSDescription">MySQL RDBMS Description</a></li>
+          <li><a href="#indexes">Indexes</a></li>
+          <li><a href="#transactions">Transactions</a></li>
+          <li><a href="#backupRestore">Backup and Restore</a></li>
+          <li><a href="#practiceExamples">Practice Examples</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+        </ul>
+      </aside>
+      <div class="content">
+        <div class="main">
+          
+          <div class="content-header">
+            <div class="content-header-text">
+              <h1>Learn MySQL, Step by Step!</h1>
+              <p>Master database management and querying with MySQL.</p>
+            </div>
+            <button class="toggle-all-btn" onclick="toggleAllContent()">Open/Close content</button>
+        </div>
+
+          <!-- Introduction to MySQL -->
+          <h3 onclick="toggleContent('mySqlIntroDescription')" style="font-weight: 700; color: #ffffff;">MySQL
+            Introduction</h3>
+          <div id="mySqlIntroDescription" class="description">
+            <p><span class="highlight">What is MySQL?</span></p>
+            <ul>
+              <li>MySQL is a relational database management system.</li>
+              <li>MySQL is open-source.</li>
+              <li>MySQL is free.</li>
+              <li>MySQL is ideal for both small and large applications.</li>
+              <li>MySQL is very fast, reliable, scalable, and easy to use.</li>
+              <li>MySQL is cross-platform.</li>
+              <li>MySQL is compliant with the ANSI SQL standard.</li>
+              <li>MySQL was first released in 1995.</li>
+              <li>MySQL is developed, distributed, and supported by Oracle Corporation.</li>
+              <li>MySQL is named after co-founder Ulf Michael "Monty" Widenius's daughter: My.</li>
+            </ul>
+            <p><span class="highlight">Who Uses MySQL?</span></p>
+            <ul>
+              <li>Huge websites like Facebook, Twitter, Airbnb, Booking.com, Uber, GitHub, YouTube, etc.</li>
+              <li>Content Management Systems like WordPress, Drupal, Joomla!, Contao, etc.</li>
+              <li>A very large number of web developers around the world.</li>
+            </ul>
+            <p><span class="highlight">Show Data On Your Web Site</span></p>
+            <ul>
+              <li>An RDBMS database program (like MySQL).</li>
+              <li>A server-side scripting language, like PHP.</li>
+              <li>To use SQL to get the data you want.</li>
+              <li>To use HTML / CSS to style the page.</li>
+            </ul>
+          </div>
+    
+          
+
+          <!-- Database Concepts -->
+          <h3 onclick="toggleContent('databaseConcepts')">Database Concepts</h3>
+          <div id="databaseConcepts" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Core Database Ideas</span
+              >
+            </p>
+            <ul style="color: #ffffff">
+              <li>Table: A collection of rows and columns.</li>
+              <li>Row: A single record in a table.</li>
+              <li>Column: A field in a table representing a data attribute.</li>
+              <li>Primary Key: A unique identifier for a row.</li>
+              <li>Foreign Key: A field that links one table to another.</li>
+            </ul>
+          </div>
+
+          <!-- Basic MySQL Commands -->
+          <h3 onclick="toggleContent('basicCommands')">Basic MySQL Commands</h3>
+          <div id="basicCommands" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Essential Commands</span
+              >
+            </p>
+            <ul style="color: #ffffff">
+              <li><code>CREATE DATABASE</code>: Create a new database.</li>
+              <li><code>USE</code>: Select a database to work with.</li>
+              <li>
+                <code>CREATE TABLE</code>: Create a table with defined columns.
+              </li>
+              <li><code>INSERT INTO</code>: Add records to a table.</li>
+              <li><code>SELECT</code>: Retrieve data from a table.</li>
+            </ul>
+            <pre class="code-block">
+CREATE DATABASE my_database;
+USE my_database;
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  email VARCHAR(100)
+);
+INSERT INTO users (name, email) VALUES ('John Doe', 'john@example.com');
+SELECT * FROM users;</pre
+            >
+          </div>
+
+          <!-- MySQL Data Types -->
+          <h3 onclick="toggleContent('dataTypes')">MySQL Data Types</h3>
+          <div id="dataTypes" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Types of Data</span
+              >
+            </p>
+            <ul style="color: #ffffff">
+              <li><b>INT:</b> Integer numbers.</li>
+              <li><b>VARCHAR:</b> Variable-length strings.</li>
+              <li><b>DATE:</b> Date values.</li>
+              <li><b>FLOAT:</b> Floating-point numbers.</li>
+            </ul>
+          </div>
+
+          <!-- Writing Queries -->
+          <h3 onclick="toggleContent('queries')">Writing Queries</h3>
+          <div id="queries" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Retrieving Data</span
+              >
+            </p>
+            <pre class="code-block">
+SELECT * FROM users WHERE name = 'John';
+SELECT name, email FROM users ORDER BY name ASC;
+SELECT COUNT(*) FROM users;
+            </pre>
+          </div>
+
+          <!-- Joins in MySQL -->
+          <h3 onclick="toggleContent('joins')">Joins in MySQL</h3>
+          <div id="joins" class="description">
+            <p>
+              <span style="color: #ffac1c; font-weight: 600; font-size: 1.2em"
+                >Combining Tables</span
+              >
+            </p>
+            <pre class="code-block">
+SELECT orders.id, users.name, orders.total 
+FROM orders 
+JOIN users ON orders.user_id = users.id;
+            </pre>
+          </div>
+
+          <h3 onclick="toggleContent('mySqlRDBMSDescription')" style="font-weight: 700; color: #ffffff;">MySQL RDBMS</h3>
+          <div id="mySqlRDBMSDescription" class="description">
+            <p><span class="highlight">What is RDBMS?</span></p>
+            <ul>
+              <li>RDBMS stands for Relational Database Management System.</li>
+              <li>RDBMS is a program used to maintain a relational database.</li>
+              <li>RDBMS is the basis for all modern database systems such as MySQL, Microsoft SQL Server, Oracle, and
+                Microsoft Access.
+              </li>
+              <li>RDBMS uses SQL queries to access the data in the database.</li>
+            </ul>
+            <p><span class="highlight">What is a Database Table?</span></p>
+            <ul>
+              <li>A table is a collection of related data entries, and it consists of columns and rows.</li>
+              <li>A column holds specific information about every record in the table.</li>
+              <li>A record (or row) is each individual entry that exists in a table.</li>
+              <li>Look at a selection from the Northwind "Customers" table:</li>
+            </ul>
+              <table style="width: 100%; border-collapse: collapse; margin-top: 10px; margin-bottom: 10px;">
+                <thead>
+                <tr style="background-color: #f8f8f8;">
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">CustomerID</th>
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">CustomerName</th>
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">ContactName</th>
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Address</th>
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">City</th>
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">PostalCode</th>
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Country</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">1</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Alfreds Futterkiste</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Maria Anders</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Obere Str. 57</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Berlin</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">12209</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Germany</td>
+                </tr>
+                <tr style="background-color: #f8f8f8;">
+                  <td style="border: 1px solid #ddd; padding: 8px;">2</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Ana Trujillo Emparedados y helados</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Ana Trujillo</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Avda. de la Constitución 2222</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">México D.F.</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">05021</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Mexico</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">3</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Antonio Moreno Taquería</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Antonio Moreno</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Mataderos 2312</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">México D.F.</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">05023</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Mexico</td>
+                </tr>
+                <tr style="background-color: #f8f8f8;">
+                  <td style="border: 1px solid #ddd; padding: 8px;">4</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Around the Horn</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Thomas Hardy</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">120 Hanover Sq.</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">London</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">WA1 1DP</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">UK</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">5</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Berglunds snabbköp</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Christina Berglund</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Berguvsvägen 8</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Luleå</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">S-958 22</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Sweden</td>
+                </tr>
+                </tbody>
+              </table>
+            <p class="highlight">What is a Relational Database?</p>
+            <ul>
+              <li>A relational database defines database relationships in the form of tables. The tables are related to each other - based on data common to each.</li>
+              <li>Look at the following three tables "Customers", "Orders", and "Shippers" from the Northwind database:</li>
+              <h2 class="highlight">Customers Table</h2>
+              <table style="width: 100%; border-collapse: collapse; margin-bottom: 10px; margin-top: 10px;">
+                <thead>
+                <tr style="background-color: #f8f8f8;">
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">CustomerID</th>
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">CustomerName</th>
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">ContactName</th>
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Address</th>
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">City</th>
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">PostalCode</th>
+                  <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Country</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">1</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Alfreds Futterkiste</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Maria Anders</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Obere Str. 57</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Berlin</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">12209</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Germany</td>
+                </tr>
+                <tr style="background-color: #f8f8f8;">
+                  <td style="border: 1px solid #ddd; padding: 8px;">2</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Ana Trujillo Emparedados y helados</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Ana Trujillo</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Avda. de la Constitución 2222</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">México D.F.</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">05021</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Mexico</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">3</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Antonio Moreno Taquería</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Antonio Moreno</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Mataderos 2312</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">México D.F.</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">05023</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Mexico</td>
+                </tr>
+                <tr style="background-color: #f8f8f8;">
+                  <td style="border: 1px solid #ddd; padding: 8px;">4</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Around the Horn</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Thomas Hardy</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">120 Hanover Sq.</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">London</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">WA1 1DP</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">UK</td>
+                </tr>
+                <tr>
+                  <td style="border: 1px solid #ddd; padding: 8px;">5</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Berglunds snabbköp</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Christina Berglund</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Berguvsvägen 8</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Luleå</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">S-958 22</td>
+                  <td style="border: 1px solid #ddd; padding: 8px;">Sweden</td>
+                </tr>
+                </tbody>
+              </table>
+            </ul>
+          </div>
+
+          <!-- More Topics -->
+          <h3 onclick="toggleContent('indexes')">Indexes</h3>
+          <div id="indexes" class="description">
+            <p>Indexes speed up queries on large tables. Create with:</p>
+            <pre class="code-block">
+CREATE INDEX idx_name ON users (name);
+            </pre>
+          </div>
+
+          <h3 onclick="toggleContent('transactions')">Transactions</h3>
+          <div id="transactions" class="description">
+            <p>Ensure data integrity with transactions:</p>
+            <pre class="code-block">
+START TRANSACTION;
+UPDATE accounts SET balance = balance - 100 WHERE id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE id = 2;
+COMMIT;
+            </pre>
+          </div>
+
+          <!-- Practice Examples -->
+          <h3 onclick="toggleContent('practiceExamples')">Practice Examples</h3>
+          <div id="practiceExamples" class="description">
+            <p>Try these queries:</p>
+            <pre class="code-block">
+-- Retrieve all emails
+SELECT email FROM users;
+
+-- Get total number of users
+SELECT COUNT(*) FROM users;
+
+-- List all orders for a specific user
+SELECT * FROM orders WHERE user_id = 1;
+            </pre>
+          </div>
+
+          <!-- Conclusion -->
+          <h3 onclick="toggleContent('conclusion')">Conclusion</h3>
+          <div id="conclusion" class="description">
+            <p>
+              MySQL is a powerful database system. With practice, you'll be able
+              to manage, query, and optimize databases efficiently!
+            </p>
+          </div>
+        </div>
+        <footer>
+          <div class="inner-footer">
+            <p>Made by Ahmed Abu Seada</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        const descriptions = document.querySelectorAll(".description");
+        descriptions.forEach((description) => {
+          description.style.display = "none";
+        });
+        const toggleBtn = document.querySelector(".toggle-btn");
+        toggleBtn.textContent = "<";
+      };
+
+      function toggleContent(elementId) {
+        const content = document.getElementById(elementId);
+        if (content.style.display === "none") {
+          content.style.display = "block";
+        } else {
+          content.style.display = "none";
+        }
+      }
+
+      function toggleSidebar() {
+        const sidebar = document.querySelector(".sidebar");
+        const toggleBtn = document.querySelector(".toggle-btn");
+
+        sidebar.classList.toggle("hidden");
+        toggleBtn.classList.toggle("open");
+
+        if (toggleBtn.classList.contains("open")) {
+          toggleBtn.textContent = ">";
+        } else {
+          toggleBtn.textContent = "<";
+        }
+      }
+
+      function toggleAllContent() {
+        const descriptions = document.querySelectorAll(".description");
+        const areAllClosed = Array.from(descriptions).every(
+          (desc) => desc.style.display === "none"
+        );
+
+        descriptions.forEach((description) => {
+          description.style.display = areAllClosed ? "block" : "none";
+        });
+      }
+    </script>
+  </body>
+</html>
